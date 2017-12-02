@@ -17,7 +17,7 @@ public class IndexController implements Controller {
 		
 		ModelAndView mv=new ModelAndView();
 		mv.addObject("name","spring mvc start index");
-		mv.setViewName("WEB-INF/index.jsp");
+		mv.setViewName("index");
 		return mv;
 	}
 

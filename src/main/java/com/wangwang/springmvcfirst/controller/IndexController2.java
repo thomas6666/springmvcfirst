@@ -13,7 +13,7 @@ public class IndexController2 implements HttpRequestHandler {
 	@Override
 	public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        //request.setAttribute("name", "handler for httpRequestHandler");
-       //request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
+       //request.getRequestDispatcher("index").forward(request, response);
 	  //响应自定义的内容
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json;charset=UTF-8");

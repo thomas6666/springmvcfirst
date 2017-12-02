@@ -28,5 +28,13 @@
 <!-- 处理器适配器2 -->
 <bean id="httpRequestHandlerAdpater" class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"></bean>
 <!-- 视图解析器 -->
-<bean id="viewResolve" class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+<bean id="viewResolve" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="prefix" value="/WEB-INF/jsp/"/>
+  <property name="suffix" value=".jsp"/>
+</bean>
+
+<!-- 配置注解方式 -->
+<mvc:annotation-driven></mvc:annotation-driven>
+<!-- 使用组件扫描  控制器-->
+<context:component-scan base-package="com.wangwang.springmvcfirst"></context:component-scan>
 </beans>
