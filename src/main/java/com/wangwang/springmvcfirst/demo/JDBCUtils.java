@@ -1,6 +1,5 @@
 package com.wangwang.springmvcfirst.demo;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,7 +23,7 @@ public class JDBCUtils {
 	 */
 	static {
 		// 1、加载配置文件
-		InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("jdbc.properties");
+		InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("base/jdbc.properties");
 		Properties pts = new Properties();
 		try {
 			pts.load(is);

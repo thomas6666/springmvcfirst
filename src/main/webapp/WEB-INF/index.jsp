@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE>
@@ -11,7 +12,7 @@
    请求host:<%=request.getRemoteHost() %><br/>
   请求地址:  <%=request.getRemoteAddr() %><br/>
  请求端口:<%=request.getRemotePort() %><br/>
- 请求用户:<%=request.getRemoteUser() %>
- 
+ 请求用户:<%=request.getRemoteUser() %><br/>
+ 视图返回的结果:${name}
 </body>
 </html>
