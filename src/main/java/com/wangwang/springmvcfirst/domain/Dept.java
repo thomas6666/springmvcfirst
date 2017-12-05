@@ -29,4 +29,9 @@ public class Dept {
 		this.loc = loc;
 	}
 
+	@Override
+	public String toString() {
+		return "Dept [deptNo=" + deptNo + ", dName=" + dName + ", loc=" + loc + "]";
+	}
+
 }
