@@ -60,4 +60,7 @@ Caused by: java.sql.SQLSyntaxErrorException: ORA-02195: 尝试创建的 PERMANEN
 	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
 	... 25 more
-
+========================================================
+这个问题的解决方法
+https://zhidao.baidu.com/question/358706919.html 
+主要是表建立在TEMP表空间内，导致不能存储数据

@@ -66,3 +66,7 @@ Caused by: java.sql.SQLSyntaxErrorException: ORA-00911: 无效字符
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
 	... 26 more
 
+================================================
+这个问题导致的原因是SQL写错了
+SELECT DEPTNO,DNAME,LOC FROM `DEPT` WHERER DEPTNO=?
+ORACLE 不支持`符号 并且WHERE条件关键字也错误了
