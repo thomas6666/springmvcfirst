@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wangwang.mybatisfirst">
+	<select id="findDeptByNo"  parameterType="int" resultType="com.wangwang.springmvcfirst.domain.Dept">
+		SELECT DEPTNO,DNAME,LOC FROM DEPT WHERE DEPTNO=#{DEPTNO}
+    </select>
+    <select id="findDeptByName" parameterType="java.lang.String" resultType="com.wangwang.springmvcfirst.domain.Dept">
+      SELECT DEPTNO,DNAME,LOC FROM DEPT WHERE DNAME LIKE '%${value}%'
+    </select>
+</mapper>

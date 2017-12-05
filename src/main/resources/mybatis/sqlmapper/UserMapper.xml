@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wangwang.mybatisfirst"> 
+   <!--新增用户 -->
+   <insert id="addUser" parameterType="com.wangwang.springmvcfirst.domain.Tb_User" >
+     <!-- 获取新增后的ID 这里是非自增的，这句SQL在新增前执行-->
+     <selectKey keyProperty="userId" resultType="java.lang.Integer" order="BEFORE">
+        select seq_online.nextval from dual
+     </selectKey>
+     INSERT INTO TB_USER(USERID,USERNAME,PASSWORD,EMAIL,DESCRIPTION)
+     VALUES(#{userId},#{userName},#{password},#{email},#{description})
+   </insert>
+   
+   <!--更新用户 -->
+   <update id="updateUser" parameterType="com.wangwang.springmvcfirst.domain.Tb_User">
+      UPDATE TB_USER U SET U.DESCRIPTION=#{description} WHERE U.USERID=#{userId}
+   </update>
+   
+   <!--删除用户 -->
+   <delete id="deleteUser" parameterType="java.lang.Integer">
+   <!-- 如果这个 parameterType类型为基本类型#{USERID}这个变量名随意-->
+    DELETE TB_USER U WHERE U.USERID=#{USERID}
+   </delete>
+   
+   <!-- 查询所有用户 -->
+   <select id="selectAllUser" resultType="com.wangwang.springmvcfirst.domain.Tb_User">
+     SELECT * FROM TB_USER U
+   </select>
+   
+   <!-- 根据用户ID查询用户 -->
+   <select id="selectUserById" parameterType="java.lang.Integer" resultType="com.wangwang.springmvcfirst.domain.Tb_User">
+     SELECT * FROM TB_USER U WHERE U.USERID=#{USERID}  
+   </select>
+   
+</mapper>
