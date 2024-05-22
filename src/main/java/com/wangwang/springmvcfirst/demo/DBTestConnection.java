@@ -8,13 +8,13 @@ import java.sql.Statement;
 public class DBTestConnection {
 	public static void main(String[] args) throws Exception {
 
-		String url = "jdbc:oracle:thin:@127.0.0.1:1521:ORCL";
-		String user = "SCOTT";
-		String password = "Orcl1234";
+		String url = "jdbc:mysql://mysql.sqlpub.com:3306/thomas_mysql_db?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8";
+		String user = "thomas_root";
+		String password = "Jrl9ACvFaHEKO7H6";
 		// 1、加载驱动 这种方式不好，会导致驱动加载两次，并且耦合度太高
 		// DriverManager.registerDriver(new OracleDriver());
 		// 通过类加载驱动
-		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		// 2、获取与数据库的连接
 		Connection con = DriverManager.getConnection(url, user, password);
 		// 3、获取用于发送sql数据库statement对象

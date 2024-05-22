@@ -1,0 +1,62 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        /*{
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },*/
+        {
+            "type": "java",
+            "name": "DBTestConnection",
+            "request": "launch",
+            "mainClass": "com.wangwang.springmvcfirst.demo.DBTestConnection",
+            "projectName": "com.wangwang.springmvcfirst"
+        },
+        {
+            "type": "java",
+            "name": "HelleworldTest",
+            "request": "launch",
+            "mainClass": "com.wangwang.springmvcfirst.demo.HelleworldTest",
+            "projectName": "com.wangwang.springmvcfirst"
+        },
+        {
+            "type": "java",
+            "name": "Run Single Test",
+            "request": "launch",
+            "mainClass": "org.junit.platform.console.ConsoleLauncher",
+            "args": [
+                "--select-method=${fileBasenameNoExtension}.${lineNumber}Test",
+                "--classpath=${workspaceFolder}/target/test-classes:${workspaceFolder}/target/classes",
+                "--reports-dir=target/surefire-reports"
+            ],
+            "projectName": "com.wangwang.springmvcfirst",
+            "presentation": {
+                "group": "test",
+                "order": 1
+            }
+        },
+        {
+            "type": "java",
+            "name": "Debug Single Test",
+            "request": "launch",
+            "mainClass": "org.junit.platform.console.ConsoleLauncher",
+            "args": [
+                "--select-method=${fileBasenameNoExtension}.${lineNumber}Test",
+                "--classpath=${workspaceFolder}/target/test-classes:${workspaceFolder}/target/classes",
+                "--reports-dir=target/surefire-reports",
+                "--debug-jvm"
+            ],
+            "projectName": "com.wangwang.springmvcfirst",
+            "presentation": {
+                "group": "test",
+                "order": 1
+            }
+        }
+    ]
+   
+}

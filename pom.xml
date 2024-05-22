@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.wangwang</groupId>
 	<artifactId>com.wangwang.springmvcfirst</artifactId>
@@ -27,8 +27,8 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
+			<version>4.13.2</version>
+			<!--<scope>test</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>javax</groupId>
@@ -98,17 +98,25 @@
 			<version>${logback.version}</version>
 		</dependency>
 		<!-- oracle配置 -->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc</artifactId>
 			<version>11.2.0.4</version>
+		</dependency>-->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>			<!-- 或者你想要的其他版本 -->
+			<scope>runtime</scope>			<!-- 根据项目需求，可以选择runtime或compile -->
 		</dependency>
-		
+
+
 		<!-- mybatis -->
 		<dependency>
-		  <groupId>org.mybatis</groupId>
-		  <artifactId>mybatis</artifactId>
-		  <version>3.4.0</version>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.0</version>
 		</dependency>
 	</dependencies>
 	<build>
